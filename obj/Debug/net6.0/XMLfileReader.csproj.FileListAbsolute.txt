@@ -1,0 +1,15 @@
+/Users/ianmcconihay/XMLfileReader/bin/Debug/net6.0/XMLfileReader
+/Users/ianmcconihay/XMLfileReader/bin/Debug/net6.0/XMLfileReader.deps.json
+/Users/ianmcconihay/XMLfileReader/bin/Debug/net6.0/XMLfileReader.runtimeconfig.json
+/Users/ianmcconihay/XMLfileReader/bin/Debug/net6.0/XMLfileReader.dll
+/Users/ianmcconihay/XMLfileReader/bin/Debug/net6.0/XMLfileReader.pdb
+/Users/ianmcconihay/XMLfileReader/obj/Debug/net6.0/XMLfileReader.csproj.AssemblyReference.cache
+/Users/ianmcconihay/XMLfileReader/obj/Debug/net6.0/XMLfileReader.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ianmcconihay/XMLfileReader/obj/Debug/net6.0/XMLfileReader.AssemblyInfoInputs.cache
+/Users/ianmcconihay/XMLfileReader/obj/Debug/net6.0/XMLfileReader.AssemblyInfo.cs
+/Users/ianmcconihay/XMLfileReader/obj/Debug/net6.0/XMLfileReader.csproj.CoreCompileInputs.cache
+/Users/ianmcconihay/XMLfileReader/obj/Debug/net6.0/XMLfileReader.dll
+/Users/ianmcconihay/XMLfileReader/obj/Debug/net6.0/refint/XMLfileReader.dll
+/Users/ianmcconihay/XMLfileReader/obj/Debug/net6.0/XMLfileReader.pdb
+/Users/ianmcconihay/XMLfileReader/obj/Debug/net6.0/XMLfileReader.genruntimeconfig.cache
+/Users/ianmcconihay/XMLfileReader/obj/Debug/net6.0/ref/XMLfileReader.dll
