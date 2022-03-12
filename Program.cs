@@ -10,20 +10,23 @@
 //     Console.WriteLine("Hello "+ input);
 // }
 using System;
+using System.IO;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace XMLfileReader{
     class Program{
         static void Main(string[] args){
-            XmlTextReader xtr = new XmlTextReader("/Users/ianmcconihay/XMLfileReader/testcase.xml");
-            while (xtr.Read()){
-                if (xtr.NodeType == XmlNodeType.Element && xtr.Name == "name"){
-                    string s1 = xtr.ReadElementString();
-                    Console.WriteLine("Name = " + s1);
-                }
+            
+            IList<Record> records = new List<Record>();
+            
+            string path = Path.Combine(Environment.CurrentDirectory, "testcase.xml");
+
+            XmlSerializer xs = new XmlSerializer(typeof(List<Record>));
+
+            using(FileStream stream = File.Open(path, FileMode.Open)){
+                records = (List<Record>)xs.Deserialize(stream);
             }
-
-
         }
     }
 }
