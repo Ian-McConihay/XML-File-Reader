@@ -1,15 +1,4 @@
-﻿// Console.WriteLine("Hello, World!");
-// Console.WriteLine();
-// Console.WriteLine("Input a name");
-// string? input = Console.ReadLine();
-
-// Console.WriteLine("How many times do you want to repeat the name");
-// string? times = Console.ReadLine();
-
-// for(int i=0; i< Convert.ToInt32(times); i++){
-//     Console.WriteLine("Hello "+ input);
-// }
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Xml;
@@ -37,31 +26,41 @@ public class Root {
 	[XmlElement(ElementName="field")] 
 	public List<Field>? Field { get; set; } 
 
-    
+}
     
     static void Main(string[] args){
-         Program t = new Program();
-        // Read a purchase order.
-        t.DeserializeObject("testcase.xml");
-    
+        Program t = new Program();
+       t.DeserializeObject("testcase.xml");
 
-     void DeserializeObject(string filename){
+
+        XmlSerializer serializer = new XmlSerializer(typeof(Root));
+        using (StringReader reader = new StringReader(xml)){
+        var test = (Root)serializer.Deserialize(reader);
+ }
+ Console.WriteLine(test);
+    }
+
+     async void DeserializeObject(string filename){
+ 
+        // Read a purchase order.
         Console.WriteLine("Reading with Stream");
         // Create an instance of the XmlSerializer.
         XmlSerializer serializer =
-        new XmlSerializer(typeof(Field));
+        new XmlSerializer(typeof(Root));
+
 
         // Declare an object variable of the type to be deserialized.
-        Field i;
+        Root i;
 
-        using (Stream reader = new FileStream(filename, FileMode.Open)){
+        using (Stream reader = new FileStream(filename, FileMode.Open))
             // Call the Deserialize method to restore the object's state.
-            i = (Field)serializer.Deserialize(reader);
-        }
+            i = (Root)serializer.Deserialize(reader);
+        
 
         // Write out the properties of the object.
-        // Console.Write(
-        // i.Debtor + "\t" +
+        // Console.WriteLine(i.Name[1] + i.Value);
+        Console.WriteLine(test);
+        // Debtor + "\t" +
         // i.DebtorSSN + "\t" +
         // i.DebtorAddress1 + "\t" +
         // i.DebtorAddress2 + "\t" +
@@ -90,7 +89,6 @@ public class Root {
      }
 
         
-        }
+        
     }
-}
 }
